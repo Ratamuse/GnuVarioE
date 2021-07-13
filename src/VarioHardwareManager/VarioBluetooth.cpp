@@ -86,7 +86,9 @@ bool VarioBluetooth::update(double velocity, double position, double calibratedP
 	// ********************
 #ifdef HAVE_GPS
 	/* in priority send vario nmea sentence */
-	if (GnuSettings.VARIOMETER_SENT_LXNAV_SENTENCE == LK8000_SENTENCE)
+	
+	{
+		if (GnuSettings.VARIOMETER_SENT_LXNAV_SENTENCE == LK8000_SENTENCE)
 	{
 		if (bluetoothNMEA_Lk.available())
 		{
@@ -146,9 +148,9 @@ bool VarioBluetooth::update(double velocity, double position, double calibratedP
 		}
 		return true;
 	}
-}
+
 #endif //!HAVE_GPS
 	return false;
 }
-
+}
 #endif //HAVE_BLUETOOTH

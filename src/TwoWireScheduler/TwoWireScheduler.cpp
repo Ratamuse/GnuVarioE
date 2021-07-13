@@ -560,12 +560,12 @@ void TWScheduler::getRawAccel(int16_t *rawAccel, int32_t *quat)
   quat[1] = quat[2];
   quat[2] = -tmpValQuat;
 #elif ((VARIOVERSION == 354) || (VARIOVERSION == 390) || (VARIOVERSION == 391) || (VARIOVERSION == 395) || (VARIOVERSION == 396))
+  /* change of basis */
   rawAccel[0] = -rawAccel[0];
-  rawAccel[1] = rawAccel[1];
-  rawAccel[2] = -rawAccel[2];
+  rawAccel[1] = -rawAccel[1];
   quat[1] = -quat[1];
-  quat[2] = quat[2];
-  quat[3] = -quat[3];
+  quat[2] = -quat[2];
+  
 #endif
 }
 

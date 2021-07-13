@@ -352,7 +352,7 @@ Fly stat        0xD0		26+2
 #endif
 
 /* Set the freq */
-#define VARIO_TW_FREQ 400000UL
+#define VARIO_TW_FREQ 100000UL
 
 /*********************/
 /* MPU 9250 / MS5611 */
@@ -375,7 +375,7 @@ Fly stat        0xD0		26+2
 #define VARIO_SCL_PIN 22
 #endif
 
-#define VARIO_W_FREQ 400000UL
+#define VARIO_W_FREQ 100000UL
 
 /*********************/
 /* IMU 9250 / BNO085 */

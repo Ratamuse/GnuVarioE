@@ -84,7 +84,7 @@ void VarioHardwareManager::init()
   delay(100);
   Wire.flush();
   Wire.begin (VARIO_SDA_PIN, VARIO_SCL_PIN);
-	Wire.setClock(400000); //Increase I2C data rate to 400kHz
+	Wire.setClock(100000); //Increase I2C data rate to 400kHz
   delay (250);
 #endif
 }
